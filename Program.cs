@@ -40,7 +40,13 @@ namespace ConsoleApp2
             // T= 3.5.4
             Console.WriteLine("{0}\n{1}\n{2}", sName, bAge, favcolor);
 
+            // T= 3.6.3 в задачнике формулировка некорретна без скобок не то...
+             double result = (5.0 / 2.0) * 3.0;
+            Console.WriteLine("\nresult {0}", result);
             // Console.WriteLine("\u0023"); // uchar output
+            // T= 3.6.8
+            double result1 = 10 % 3;
+            Console.WriteLine("\nresult1 {0}", result1);
             Console.ReadKey();
 
         }
