@@ -11,52 +11,54 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            string YurName,MyName, InpStr;
+            string YurName,MyName, InpStr="Ohh";
             
             string sName =" !! ";
             bool bHavePet = false;
             byte bAge =0;
             double dFootSize =0.0;
+            DateTime dtBrthDay = DateTime.Today;
 
-            ShowAll(sName, bHavePet, bAge, dFootSize);
-            MyName = "Serge";
-            YurName = "Незнакомец";
-            Console.WriteLine("Здравствуйте  {0}, мое имя {1}. \n А как ваше?", YurName,MyName);
-            InpStr = Console.ReadLine();
-            YouSay(InpStr);
+            //ShowAll(sName, bHavePet, bAge, dFootSize, dtBrthDay); //not use ShowAll in test solving
 
-            SayOh(YurName, InpStr);
+            //MyName = "Programm 3.8 Test";
+            //YurName = "Незнакомец";
+            //Console.WriteLine("Здравствуйте  {0}, мое имя {1}. \n А как ваше?", YurName,MyName);
+
+            //Console.WriteLine("Enter yor name  {0}, мое имя {1}. \n А как ваше?");
+            Console.WriteLine("Enter yor name"); 
+            sName = Console.ReadLine();
+            Console.WriteLine("Enter yor age");
+            //bAge = Convert.ToByte(Console.ReadLine()); // Version whithout chek
+            //bAge = byte.Parse(Console.ReadLine()); // Version whith chek Var 1
+            bool ParseOK_0 = byte.TryParse(Console.ReadLine(), out bAge); // Version whith chek Var 2
+            Console.WriteLine("Yor name is  {0}, yor age {1}. \n ", sName, bAge);
+            
+            Console.WriteLine("Enter yor Birth Day");
+            bool ParseOK_1 = DateTime.TryParse(Console.ReadLine(), out dtBrthDay ); // Version whith chek Var 2
+            Console.WriteLine("Yor name is  {0}, yor Birth Day  is {1}. \n ", sName, dtBrthDay);
             //Console.WriteLine("You say "+ InpStr);
-            Console.WriteLine("\u0023");
+            // Console.WriteLine("\u0023"); // uchar output
+            //ShowAll(sName, bHavePet, bAge, dFootSize, dtBrthDay); //not use ShowAll in test solving
+
+            Console.WriteLine("Press key to exit ..."); 
             Console.ReadKey();
         }
 
-        static void ShowAll(string strVal, bool boolVal, byte byteVal, double doublVal)
+        static void ShowAll(string strVal, bool boolVal, byte byteVal, double doublVal, DateTime dtVal)
         {
             const string strName = "Name";
             const string boolName = "Have a Pet";
             const string byteName = "Age";
             const string dublName = "Foot size";
+            const string dateName = "Birth Day is: ";
 
             Console.WriteLine("ShowAll: {0} = {1}", strName, strVal);
             Console.WriteLine("ShowAll: {0} = {1}", boolName, boolVal);
             Console.WriteLine("ShowAll: {0} = {1}", byteName, byteVal);
             Console.WriteLine("ShowAll: {0} = {1}", dublName, doublVal);
-            // Console.WriteLine("Мне сообщили, что Вам {0}", age);
+            Console.WriteLine("ShowAll: {0} = {1}", dateName, dtVal);
         }
-        static void Greet(string name, string age)
-        {
-            Console.WriteLine("Здравствуйте, {0}", name);
-            Console.WriteLine("Мне сообщили, что Вам {0}", age);
-        }
-        static void SayOh(string name, string voice)
-        {
-            Console.WriteLine("Еще раз здравствуйте, {0}", name);
-            Console.WriteLine("{0}, вы правда сказали {1}?", name, voice);
-        }
-        static void YouSay(string voice)
-        {
-            Console.WriteLine("Вы сказали {0}", voice);
-        }
+     
     }
 }
