@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-// Basic version
+// Basic version on GitHub
 namespace ConsoleApp2
 {
     internal class Program
