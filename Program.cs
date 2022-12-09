@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-// Basic version
+// Basic version on GitHub V 0.1 + local
 namespace ConsoleApp2
 {
     internal class Program
@@ -24,11 +24,12 @@ namespace ConsoleApp2
             YurName = "Незнакомец";
             Console.WriteLine("Здравствуйте  {0}, мое имя {1}. \n А как ваше?", YurName,MyName);
             InpStr = Console.ReadLine();
-            YouSay(InpStr);
 
-            SayOh(YurName, InpStr);
+            //Console.WriteLine(" max Int= {0} ", int.MaxValue);
+            //Console.WriteLine(" min Int= {0} ", int.MinValue);
+
             //Console.WriteLine("You say "+ InpStr);
-            Console.WriteLine("\u0023");
+            // Console.WriteLine("\u0023"); // uchar output
             Console.ReadKey();
         }
 
@@ -42,22 +43,8 @@ namespace ConsoleApp2
             Console.WriteLine("ShowAll: {0} = {1}", strName, strVal);
             Console.WriteLine("ShowAll: {0} = {1}", boolName, boolVal);
             Console.WriteLine("ShowAll: {0} = {1}", byteName, byteVal);
-            Console.WriteLine("ShowAll: {0} = {1}", dublName, doublVal);
-            // Console.WriteLine("Мне сообщили, что Вам {0}", age);
+            Console.WriteLine("ShowAll: {0} = {1}", dublName, doublVal);         
         }
-        static void Greet(string name, string age)
-        {
-            Console.WriteLine("Здравствуйте, {0}", name);
-            Console.WriteLine("Мне сообщили, что Вам {0}", age);
-        }
-        static void SayOh(string name, string voice)
-        {
-            Console.WriteLine("Еще раз здравствуйте, {0}", name);
-            Console.WriteLine("{0}, вы правда сказали {1}?", name, voice);
-        }
-        static void YouSay(string voice)
-        {
-            Console.WriteLine("Вы сказали {0}", voice);
-        }
+     
     }
 }
