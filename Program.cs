@@ -11,12 +11,12 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            string YurName,MyName, InpStr="Ohh";
-            
-            string sName =" !! ";
+            string YurName, MyName, InpStr = "Ohh";
+
+            string sName = " !! ";
             bool bHavePet = false;
-            byte bAge =0;
-            double dFootSize =0.0;
+            byte bAge = 0;
+            double dFootSize = 0.0;
             DateTime dtBrthDay = DateTime.Today;
             /*
                         //ShowAll(sName, bHavePet, bAge, dFootSize, dtBrthDay); //not use ShowAll in test solving
@@ -48,21 +48,32 @@ namespace ConsoleApp2
 
             */
             // 4.1.10 
-            var a = 6;
+            /*
+             var a = 6;
             var b = 7;
 
             if (a == b)
             {
-                Console.WriteLine("Условие истинно");
+                Console.WriteLine("4.1.0 Условие истинно");
             }
             else if (b < 10)
             {
-                Console.WriteLine("Значение b = {0} меньше 10", b);
+                Console.WriteLine("4.1.0 Значение b = {0} меньше 10", b);
             }
             else
             {
                 Console.WriteLine("Значение b = {0} больше 10", b);
             }
+            // 4.1.11
+            if (a == b)
+            {
+                Console.WriteLine(" 4.1.1 Условие истинно");
+            }
+            else
+            {
+                Console.WriteLine("4.1.1 Условие ложно");
+            }
+            */
             // 4.1.15
             /*
             var a = 6;
@@ -70,11 +81,43 @@ namespace ConsoleApp2
             var c = a != b ? a + b : b;
 
             Console.WriteLine(c);
-            */
+         */   
 
+            // 4.1.10 
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+            var color = Console.ReadLine();
+
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is red!");
+            }
+
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is green!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is cyan!");
+            }
+        
             Console.WriteLine("Press key to exit ..."); 
             Console.ReadKey();
+
         }
+
+        
+        
 
         static void ShowAll(string strVal, bool boolVal, byte byteVal, double doublVal, DateTime dtVal)
         {
