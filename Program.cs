@@ -11,6 +11,7 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            /*
             string YurName, MyName, InpStr = "Ohh";
 
             string sName = " !! ";
@@ -18,37 +19,9 @@ namespace ConsoleApp2
             byte bAge = 0;
             double dFootSize = 0.0;
             DateTime dtBrthDay = DateTime.Today;
-            /*
-                        //ShowAll(sName, bHavePet, bAge, dFootSize, dtBrthDay); //not use ShowAll in test solving
-
-                        //MyName = "Programm 3.8 Test";
-                        //YurName = "Незнакомец";
-                        //Console.WriteLine("Здравствуйте  {0}, мое имя {1}. \n А как ваше?", YurName,MyName);
-
-                        //Console.WriteLine("Enter yor name  {0}, мое имя {1}. \n А как ваше?");
-                        Console.WriteLine("Enter yor name"); 
-                        sName = Console.ReadLine();
-                        Console.WriteLine("Enter yor age");
-                        //bAge = Convert.ToByte(Console.ReadLine()); // Version whithout chek
-                        //bAge = byte.Parse(Console.ReadLine()); // Version whith chek Var 1
-                        bool ParseOK_0 = byte.TryParse(Console.ReadLine(), out bAge); // Version whith chek Var 2
-                        Console.WriteLine("Yor name is  {0}, yor age {1}. \n ", sName, bAge);
-
-                        Console.WriteLine("Enter yor Birth Day");
-                        bool ParseOK_1 = DateTime.TryParse(Console.ReadLine(), out dtBrthDay ); // Version whith chek Var 2
-                        Console.WriteLine("Yor name is  {0}, yor Birth Day  is {1}. \n ", sName, dtBrthDay);
-                        //Console.WriteLine("You say "+ InpStr);
-                        // Console.WriteLine("\u0023"); // uchar output
-                        //ShowAll(sName, bHavePet, bAge, dFootSize, dtBrthDay); //not use ShowAll in test solving
-
-                        // 4.1.10 
-                        var inv = true;
-                        var result = !inv;
-                        Console.WriteLine("Resut = {0}", result);
-
-            */
+  
             // 4.1.10 
-            /*
+            
              var a = 6;
             var b = 7;
 
@@ -83,7 +56,7 @@ namespace ConsoleApp2
             Console.WriteLine(c);
          */   
 
-            // 4.1.10 
+            // B12-1-8  
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
             var color = Console.ReadLine();
