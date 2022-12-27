@@ -10,6 +10,9 @@ namespace ConsoleApp2
 {
     internal class Program
     {
+        static string ShowColor()
+        { return "Green"; }
+
         static void Main(string[] args)
         {
             /*
